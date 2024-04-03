@@ -1,0 +1,70 @@
+huggingface_hub==0.21.0
+
+# transformers==4.38.1 #support gemma model
+transformers==4.39.3
+
+# urllib3==2.0.4
+urllib3==1.26.16
+jsonschema==4.19.0
+# for showing download widget in jupyter notebook
+ipywidgets==8.1.0
+# for python script input arg generation
+click==8.1.7
+
+pypdf==3.15.5
+
+# torch==2.1.2
+# torchaudio==2.1.2
+# torchvision==0.16.2
+# fastai==2.7.13
+
+# Testing MPS memory features
+torch==2.2.2
+torchaudio==2.2.2
+torchvision==0.17.2
+# vision library
+fastai==2.7.14 # fastai depends on torch version
+
+## langchain LLM
+langchain==0.1.14 # 0.1.5
+
+# need Pydantic 1.10.12 to better evaluate typehints
+# https://github.com/langchain-ai/langchain/issues/8577#issuecomment-1663249273
+pydantic==2.6.4
+# pydantic==1.10.13
+
+# docarray doesn't work with pydantic 2.xx, pydantic_core is installed with 2.xx, must be removed. 
+# pydantic>=1.10.13 # typehints
+unstructured==0.11.0 # for langchain S3DirectoryLoader to load txt file
+sentence-transformers==2.6.1 # for langchain vectorestore embedding model
+docarray==0.40.0 # langchain DocArrayInMemorySearch nned docarray
+
+# llama-index==0.9.8.post1
+
+# s3 client
+boto3==1.34.76
+
+## GPU/MPS training speed up for tranformers
+# accelerate==0.26.1
+accelerate==0.28.0 #0.27.2
+peft==0.10.0 #0.8.2
+
+# For tensorflow and macosx m1 gput
+# tensorflow==2.14.1
+# backend of pretrained google model from tensorflow hub are on Kaggle
+tensorflow==2.16.1 
+tensorflow-metal==1.1.0
+tensorflow-hub==0.16.1
+
+## install huggingface datasets for fine-tuning on MPS backend device using torch
+datasets==2.18.0
+# huggingface evaluate for evaluate the fine-tuned model
+evaluate==0.4.1
+
+# transformer model quantization
+bitsandbytes==0.42.0 #0.42.0
+
+# install your own gitlab package 
+# --index-url https://gitlab.lrz.de/api/v4/projects/150553/packages/pypi/simple
+# --trusted-host https://gitlab.lrz.de
+applyllm==0.0.6
