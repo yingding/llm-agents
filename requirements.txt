@@ -46,7 +46,8 @@ boto3==1.34.76
 
 ## GPU/MPS training speed up for tranformers
 # accelerate==0.26.1
-accelerate==0.28.0 #0.27.2
+# accelerate==0.28.0 #0.27.2
+accelerate==0.29.1
 peft==0.10.0 #0.8.2
 
 # For tensorflow and macosx m1 gput
@@ -71,6 +72,4 @@ applyllm==0.0.6
 
 faiss-cpu==1.8.0
 langchainhub==0.1.15
-
-accelerate==0.29.1
 
