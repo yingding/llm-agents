@@ -110,10 +110,10 @@ def download(model_type: str=default_model_type, dir_mode: str=default_dir_mode)
     print(f"local_dir: {local_dir}")
 
     from huggingface_hub import snapshot_download, hf_hub_download
-    # download all files
+    # download all files https://github.com/ggerganov/llama.cpp/discussions/2948
     # snapshot_download(repo_id=model_name, local_dir=local_dir,
     #                 local_dir_use_symlinks=False, revision="main")
-    # download a specific file
+    # download a specific file https://huggingface.co/docs/huggingface_hub/en/guides/download
     hf_hub_download(repo_id=model_name, local_dir=local_dir, filename=file_name,
                     local_dir_use_symlinks=False, revision="main")
     
