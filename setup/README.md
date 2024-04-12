@@ -15,7 +15,7 @@ open http://localhost:11434
 
 ### Create he Modelfile
 ```shell
-touch ./deployment/Modelfile
+touch ./deployconfig/ollama/Modelfile
 ```
 
 * ollama model param - https://github.com/ollama/ollama/blob/main/docs/modelfile.md#parameter
@@ -47,7 +47,7 @@ View the
 ollama list
 ```
 
-### Run the ollama model
+### Run the ollama model with ollama cli in terminal for testing
 ```shell
 model_name=gorilla-openfunctions-v2-q4_K_M
 ollama run ${model_name}
@@ -65,7 +65,7 @@ model_name=adrienbrault/gorilla-openfunctions-v2:Q4_K_M
 ollama show --modelfile ${model_name}
 ```
 
-### (optional) exit ollama run
+### (optional) exit ollama terminal cli
 ```shell
 /byes
 ```
