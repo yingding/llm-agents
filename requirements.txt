@@ -76,6 +76,6 @@ langchainhub==0.1.15
 # For Stable DiffusionPipeline
 diffusers==0.27.2
 # open ai
-openai==0.28.1
-# openai==1.17.0
+# openai==0.28.1
+openai==1.17.0
 
