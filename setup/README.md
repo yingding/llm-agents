@@ -31,7 +31,7 @@ ASSISTANT:
 ### Create a ollama model from the Hf model
 ```shell
 model_name=gorilla-openfunctions-v2-q4_K_M
-model_file="$HOME/VCS/github/ml/llm-agents/deployment/Modelfile"
+model_file="$HOME/VCS/github/ml/llm-agents/deployment/ollama/Modelfile"
 ollama create ${model_name} -f ${model_file}
 ```
 
