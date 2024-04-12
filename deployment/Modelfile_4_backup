@@ -1,0 +1,29 @@
+FROM "/Users/yingding/MODELS/ollama/hf/gorilla-openfunctions-v2-q4_K_M.gguf"
+
+TEMPLATE """
+{% if not add_generation_prompt is defined %}
+{% set add_generation_prompt = false %}
+{% endif %}
+{%- set ns = namespace(found=false) -%}
+{%- for message in messages -%}
+    {%- if message['role'] == 'system' -%}
+        {%- set ns.found = true -%}
+    {%- endif -%}
+{%- endfor -%}
+{%- if not ns.found -%}
+{%- endif %}
+{%- for message in messages %}
+    {%- if message['role'] == 'system' %}
+{{ message['content'] }}
+    {%- else %}
+        {%- if message['role'] == 'user' %}
+            {{'### Instruction:\n' + message['content'] + '\n'}}
+        {%- else %}
+            {{'### Response:\n' + message['content'] + '\n\n'}}
+        {%- endif %}
+    {%- endif %}
+{%- endfor %}
+{% if add_generation_prompt %}
+{{'### Response:'}}
+{% endif %}
+"""

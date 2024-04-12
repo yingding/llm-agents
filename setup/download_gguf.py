@@ -30,7 +30,7 @@ file_name = "gorilla-openfunctions-v2-q4_K_M.gguf"
 
 dir_mode_map = {
     "kf_notebook": DirectorySetting(),
-    "mac_local": DirectorySetting(home_dir="/Users/yingding", transformers_cache_home="MODELS/ollama", huggingface_token_file="MODELS/.huggingface_token"),
+    "mac_local": DirectorySetting(home_dir="/Users/yingding", transformers_cache_home="MODELS/ollama/hf", huggingface_token_file="MODELS/.huggingface_token"),
 }
 
 default_model_type = "gorilla-gguf-v2"

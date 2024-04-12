@@ -1,0 +1,8 @@
+FROM "/Users/yingding/MODELS/ollama/hf/gorilla-openfunctions-v2-q4_K_M.gguf"
+
+PARAMETER stop "<|im_end|>"
+TEMPLATE """
+USER: <<functions>> {{ functions_string }} 
+<<question>> {{ .Prompt }} 
+ASSISTANT:
+"""

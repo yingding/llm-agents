@@ -1,0 +1,6 @@
+FROM "/Users/yingding/MODELS/ollama/hf/gorilla-openfunctions-v2-q4_K_M.gguf"
+
+TEMPLATE """
+USER: <<question>> {prompt} <<function>> {function_string}
+ASSISTANT:
+"""

@@ -33,6 +33,7 @@ model_map = {
     "gemma2b" : "google/gemma-2b",
     "gemma7b-it-1.1": "google/gemma-1.1-7b-it",
     "gemma2b-it-1.1": "google/gemma-1.1-2b-it",
+    "gorilla-function-v2" : "gorilla-llm/gorilla-openfunctions-v2",
 }
 
 dir_mode_map = {

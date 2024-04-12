@@ -12,6 +12,7 @@ source ./envtools/create_env.sh -p ~/VENV/${ENV_NAME} -v $VERSION
 VERSION=3.11;
 ENV_NAME="agents${VERSION}";
 source ~/VENV/${ENV_NAME}/bin/activate;
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt --no-cache-dir
 ```
 
@@ -50,7 +51,7 @@ jupyter kernelspec uninstall -y ${ENV_NAME}
 ```
 
 ## (Optional) Remove all package from venv
-```
+```shell
 python3 -m pip freeze | xargs pip uninstall -y
 python3 -m pip list
 ```
