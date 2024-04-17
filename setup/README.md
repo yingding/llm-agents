@@ -53,6 +53,17 @@ model_name=gorilla-openfunctions-v2-q4_K_M
 ollama run ${model_name}
 ```
 
+## Important Notice with Ollama Version update.
+The ollama model converted from gguf must be recreated after every ollama version update
+```shell
+# remove
+model_name=<model_name>
+ollama rm ${model_name}
+# recreate
+model_file="<model_file_path>/Modelfile"
+ollama create ${model_name} -f ${model_file}
+```
+
 ### (optional) remove the ollama model
 ```shell
 model_name=gorilla-openfunctions-v2-q4_K_M
