@@ -6,6 +6,9 @@ python3 setup/download_gguf.py -t gorilla-gguf-v1 -m mac_local
 
 ## Ollama custom model deployment
 ### Install ollama
+* 0.1.37
+* 0.1.32
+
 
 ### Test ollama cli
 ```shell

@@ -1,8 +1,7 @@
-# huggingface_hub==0.21.0
-huggingface_hub==0.23.0
+huggingface_hub==0.21.0
 
-# transformers==4.39.3
-transformers==4.40.2
+# transformers==4.38.1 #support gemma model
+transformers==4.39.3
 
 # urllib3==2.0.4
 urllib3==1.26.16
@@ -12,8 +11,7 @@ ipywidgets==8.1.0
 # for python script input arg generation
 click==8.1.7
 
-# pypdf==3.15.5
-pypdf==4.2.0
+pypdf==3.15.5
 
 # torch==2.1.2
 # torchaudio==2.1.2
@@ -21,45 +19,35 @@ pypdf==4.2.0
 # fastai==2.7.13
 
 # Testing MPS memory features
-# torch==2.2.2
-# torchaudio==2.2.2
-# torchvision==0.17.2
-
-torch==2.3.0
-torchaudio==2.3.0
-torchvision==0.18.0
-
+torch==2.2.2
+torchaudio==2.2.2
+torchvision==0.17.2
 # vision library
-# fastai==2.7.14 # fastai depends on torch version
-fastai==2.7.15
+fastai==2.7.14 # fastai depends on torch version
 
 ## langchain LLM
-# langchain==0.1.14
-langchain==0.1.20
+langchain==0.1.14 # 0.1.5
 
 # need Pydantic 1.10.12 to better evaluate typehints
 # https://github.com/langchain-ai/langchain/issues/8577#issuecomment-1663249273
+pydantic==2.6.4
 # pydantic==1.10.13
-# pydantic==2.6.4
-pydantic==2.7.1
 
 # docarray doesn't work with pydantic 2.xx, pydantic_core is installed with 2.xx, must be removed. 
 # pydantic>=1.10.13 # typehints
-# unstructured==0.11.0 # for langchain S3DirectoryLoader to load txt file
-unstructured==0.13.7
-# sentence-transformers==2.6.1 # for langchain vectorestore embedding model
-sentence-transformers==2.7.0
+unstructured==0.11.0 # for langchain S3DirectoryLoader to load txt file
+sentence-transformers==2.6.1 # for langchain vectorestore embedding model
 docarray==0.40.0 # langchain DocArrayInMemorySearch nned docarray
 
 # llama-index==0.9.8.post1
 
 # s3 client
-# boto3==1.34.76
-boto3==1.34.105
+boto3==1.34.76
 
 ## GPU/MPS training speed up for tranformers
-# accelerate==0.29.1
-accelerate==0.30.1
+# accelerate==0.26.1
+# accelerate==0.28.0 #0.27.2
+accelerate==0.29.1
 peft==0.10.0 #0.8.2
 
 # For tensorflow and macosx m1 gput
@@ -70,15 +58,12 @@ tensorflow-metal==1.1.0
 tensorflow-hub==0.16.1
 
 ## install huggingface datasets for fine-tuning on MPS backend device using torch
-# datasets==2.18.0
-datasets==2.19.1
+datasets==2.18.0
 # huggingface evaluate for evaluate the fine-tuned model
-# evaluate==0.4.1
-evaluate==0.4.2
+evaluate==0.4.1
 
 # transformer model quantization
 bitsandbytes==0.42.0 #0.42.0
-# bitsandbytes==0.43.1
 
 # install your own gitlab package 
 # --index-url https://gitlab.lrz.de/api/v4/projects/150553/packages/pypi/simple
@@ -91,6 +76,7 @@ langchainhub==0.1.15
 # For Stable DiffusionPipeline
 diffusers==0.27.2
 # open ai
-# openai==1.20.0
-openai==1.30.1
+# openai==0.28.1
+# openai==1.17.0
+openai==1.20.0
 
