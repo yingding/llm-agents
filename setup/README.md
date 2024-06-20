@@ -93,6 +93,13 @@ ollama show --modelfile ${model_name}
 /byes
 ```
 
+### pull model
+```shell
+ollama pull zephyr:7b
+```
+* https://ollama.com/library/zephyr
+
+
 Reference:
 * https://www.markhneedham.com/blog/2023/10/18/ollama-hugging-face-gguf-models/
 * create ollama model from hf gguf - https://www.youtube.com/watch?v=TFwYvHZV6j0

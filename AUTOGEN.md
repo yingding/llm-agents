@@ -16,5 +16,20 @@ autogenstudio ui --host 127.0.0.1 --port 8080 --appdir ./autogen/studio/
 * Autogen Studio https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 * AutoGen github https://github.com/microsoft/autogen
 
+## Trouble shot
+While using the local ollama zephyr:7b model in AutoGen Studio
+You need to remove all the gpt-4-preview model from the Agent Config of all the default and travel agents in Agents menu, in Models tab.
+
+![local agent](./img/remove_gpt_4_model.png)
+
+* default_assistant
+* user_proxy
+* travel_groupchat
+* language_assistant
+* local_assistant
+* planner_assistant
+
+otherwise you will receive a openai_key needed error.
+
 ## Function calling leader board
 * https://gorilla.cs.berkeley.edu/leaderboard.html

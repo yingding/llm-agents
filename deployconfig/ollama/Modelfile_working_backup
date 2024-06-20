@@ -1,12 +1,5 @@
 FROM "/Users/yingding/MODELS/downloads/hf/gorilla-openfunctions-v2-q4_K_M.gguf"
 
 TEMPLATE """
-<<question>>
 {{ .Prompt }}
-
-{{- if .Functions}}
-<<function>>
-{{ .Functions}}
-{{- end }}
 """
-
