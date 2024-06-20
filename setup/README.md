@@ -6,8 +6,13 @@ python3 setup/download_gguf.py -t gorilla-gguf-v1 -m mac_local
 
 ## Ollama custom model deployment
 ### Install ollama
+* 0.1.44
 * 0.1.37
 * 0.1.32
+
+```shell
+ollama -v
+```
 
 
 ### Test ollama cli
@@ -65,6 +70,10 @@ ollama rm ${model_name}
 # recreate
 model_file="<model_file_path>/Modelfile"
 ollama create ${model_name} -f ${model_file}
+```
+or
+```shell
+source $HOME/VCS/github/ml/llm-agents/setup/update.sh
 ```
 
 ### (optional) remove the ollama model
