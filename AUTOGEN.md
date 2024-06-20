@@ -15,3 +15,6 @@ autogenstudio ui --host 127.0.0.1 --port 8080 --appdir ./autogen/studio/
 ## Reference:
 * Autogen Studio https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 * AutoGen github https://github.com/microsoft/autogen
+
+## Function calling leader board
+* https://gorilla.cs.berkeley.edu/leaderboard.html
