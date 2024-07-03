@@ -34,6 +34,8 @@ model_map = {
     "gemma7b-it-1.1": "google/gemma-1.1-7b-it",
     "gemma2b-it-1.1": "google/gemma-1.1-2b-it",
     "gorilla-function-v2" : "gorilla-llm/gorilla-openfunctions-v2",
+    "phi3small-128k" : "microsoft/Phi-3-small-128k-instruct",
+    "phi3mini-128k" : "microsoft/Phi-3-mini-128k-instruct",
 }
 
 dir_mode_map = {
