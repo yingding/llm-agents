@@ -110,14 +110,16 @@ def download(model_type: str=default_model_type, dir_mode: str=default_dir_mode)
     print(f"model_name: {model_name}")
     print("-"*10)
     
+    kwargs = {"trust_remote_code" : True}
     if need_token(model_type):
         # kwargs = {"use_auth_token": get_token(dir_setting)}
-        kwargs = {"token": get_token(dir_setting)}
+        kwargs = kwargs | {"token": get_token(dir_setting)}
         print("huggingface token loaded")
     else:
-        kwargs = {}
+        # kwargs = {}
         print("huggingface token is NOT needed")
     print("-"*10)
+    print(kwargs)
     tokenizer = AutoTokenizer.from_pretrained(model_name, **kwargs)
     model = AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
     
