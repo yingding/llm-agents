@@ -34,10 +34,12 @@ model_map = {
     "gemma7b-it-1.1": "google/gemma-1.1-7b-it",
     "gemma2b-it-1.1": "google/gemma-1.1-2b-it",
     "gorilla-function-v2" : "gorilla-llm/gorilla-openfunctions-v2",
+    "phi3mini-4k" : "microsoft/Phi-3-mini-4k-instruct",
+    # "phi3small-8k" : "microsoft/Phi-3-small-8k-instruct",
     # "phi3small-128k" : "microsoft/Phi-3-small-128k-instruct",
     # "phi3mini-128k" : "microsoft/Phi-3-mini-128k-instruct",
 }
-# phi is not working on mps
+# phi 128k, 8k is not working on mps, but cuda only
 
 dir_mode_map = {
     "kf_notebook": DirectorySetting(),
@@ -48,7 +50,7 @@ default_model_type = "mistral7B-01"
 default_dir_mode = "kf_notebook"
 
 
-def need_token(model_type: str, model_name_prefix: list=["llama", "gemma"]):
+def need_token(model_type: str, model_name_prefix: list=["llama", "gemma", "phi"]):
     """check if the model needs token"""
     return any([model_type.startswith(prefix) for prefix in model_name_prefix])
 
