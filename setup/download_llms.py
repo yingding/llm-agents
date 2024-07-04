@@ -34,9 +34,10 @@ model_map = {
     "gemma7b-it-1.1": "google/gemma-1.1-7b-it",
     "gemma2b-it-1.1": "google/gemma-1.1-2b-it",
     "gorilla-function-v2" : "gorilla-llm/gorilla-openfunctions-v2",
-    "phi3small-128k" : "microsoft/Phi-3-small-128k-instruct",
-    "phi3mini-128k" : "microsoft/Phi-3-mini-128k-instruct",
+    # "phi3small-128k" : "microsoft/Phi-3-small-128k-instruct",
+    # "phi3mini-128k" : "microsoft/Phi-3-mini-128k-instruct",
 }
+# phi is not working on mps
 
 dir_mode_map = {
     "kf_notebook": DirectorySetting(),
@@ -110,7 +111,16 @@ def download(model_type: str=default_model_type, dir_mode: str=default_dir_mode)
     print(f"model_name: {model_name}")
     print("-"*10)
     
-    kwargs = {"trust_remote_code" : True}
+    # import torch 
+    if dir_mode == "mac_local":
+        # torch.set_default_device("mps") # set the default device to mps
+        device_map = "mps"
+    else:
+        # torch.set_default_device("auto")
+        device_map = "mps"
+
+    kwargs = {"trust_remote_code" : True,
+              "device_map": device_map}
     if need_token(model_type):
         # kwargs = {"use_auth_token": get_token(dir_setting)}
         kwargs = kwargs | {"token": get_token(dir_setting)}
