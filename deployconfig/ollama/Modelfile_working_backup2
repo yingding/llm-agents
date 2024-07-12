@@ -4,15 +4,9 @@ TEMPLATE """
 <<question>>
 {{ .Prompt }}
 
-{{- if .System}}
-<<function>>
-{{ .System}}
-{{- end }}
-
 {{- if .Functions}}
 <<function>>
 {{ .Functions}}
 {{- end }}
-
-<<response>> 
 """
+
