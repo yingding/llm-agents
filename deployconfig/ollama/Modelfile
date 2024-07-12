@@ -8,11 +8,4 @@ TEMPLATE """
 <<function>>
 {{ .System}}
 {{- end }}
-
-{{- if .Functions}}
-<<function>>
-{{ .Functions}}
-{{- end }}
-
-<<response>> 
 """
