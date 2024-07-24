@@ -99,6 +99,7 @@ ollama show --modelfile ${model_name}
 ### pull model
 ```shell
 ollama pull zephyr:7b
+ollama pull llama3-groq-tool-use:8b
 ```
 * https://ollama.com/library/zephyr
 
@@ -106,6 +107,7 @@ ollama pull zephyr:7b
 Reference:
 * https://www.markhneedham.com/blog/2023/10/18/ollama-hugging-face-gguf-models/
 * create ollama model from hf gguf - https://www.youtube.com/watch?v=TFwYvHZV6j0
+
 
 ### Patch to OpenAI response
 Using custom response adaptor
