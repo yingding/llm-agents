@@ -166,3 +166,6 @@ mlruns/
 
 **/video/
 **/videos/
+
+
+.DS_Store
