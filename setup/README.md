@@ -107,6 +107,7 @@ ollama pull llama3-groq-tool-use:8b
 Reference:
 * https://www.markhneedham.com/blog/2023/10/18/ollama-hugging-face-gguf-models/
 * create ollama model from hf gguf - https://www.youtube.com/watch?v=TFwYvHZV6j0
+* ollama with langchain local function calling - https://www.youtube.com/watch?v=Nfk99Fz8H9k
 
 
 ### Patch to OpenAI response
