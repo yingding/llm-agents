@@ -1,16 +1,14 @@
 FROM "/Users/yingding/MODELS/downloads/hf/gorilla-openfunctions-v2-q4_K_M.gguf"
 
 TEMPLATE """
+{{ if .Messages }}
 <<question>>
 {{ .Prompt }}
-
-{{- if .System }}
-<<function>>
-{{ .System }}
-{{- end }}
 
 {{- if .Tools }}
 <<function>>
 {{ .Tools }}
 {{- end }}
+{{ end }}
+{{ .Response }}
 """

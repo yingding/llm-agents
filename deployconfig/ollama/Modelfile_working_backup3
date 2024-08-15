@@ -8,9 +8,4 @@ TEMPLATE """
 <<function>>
 {{ .System }}
 {{- end }}
-
-{{- if .Tools }}
-<<function>>
-{{ .Tools }}
-{{- end }}
 """

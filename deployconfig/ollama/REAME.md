@@ -51,3 +51,6 @@ uber.ride(USER="plus", LOC="94704", TIME=10)
 Ollama openai endpoint isn't supporting function calling using openai compatible endpoint at the time of writing on 20th June 2024
 
 * https://github.com/ollama/ollama/blob/main/docs/openai.md#endpoints
+
+## Tools template 
+* llama3.1 tools template https://ollama.com/library/llama3.1/blobs/11ce4ee3e170
