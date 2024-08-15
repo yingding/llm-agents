@@ -101,6 +101,7 @@ ollama show --modelfile ${model_name}
 ```shell
 ollama pull zephyr:7b
 ollama pull llama3-groq-tool-use:8b
+ollama pull llama3.1:8b
 ```
 * https://ollama.com/library/zephyr
 
