@@ -13,6 +13,3 @@ git clone https://github.com/yingding/llm-agents.git
 
 ## Quantization on Apple Silicon
 * https://huggingface.co/docs/hub/en/mlx
-
-
-
