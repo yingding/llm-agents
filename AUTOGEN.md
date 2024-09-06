@@ -10,9 +10,9 @@ cd <project root>
 autogenstudio ui --host 127.0.0.1 --port 8080 --appdir ./autogen/studio/
 ```
 
-
-
 ## Reference:
+* Blog post: https://www.microsoft.com/en-us/research/blog/introducing-autogen-studio-a-low-code-interface-for-building-multi-agent-workflows/
+* Paper: https://arxiv.org/abs/2408.15247
 * Autogen Studio https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 * AutoGen github https://github.com/microsoft/autogen
 
