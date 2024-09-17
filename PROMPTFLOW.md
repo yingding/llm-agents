@@ -13,7 +13,47 @@ Tutorial: Chat with PDF: An end-to-end tutorial on how to build a high quality c
 `Prompt flow for VS Code`
 * https://marketplace.visualstudio.com/items?itemName=prompt-flow.prompt-flow
 
+## Get startet with Prompt Flow
+* https://microsoft.github.io/promptflow/how-to-guides/quick-start.html
 
+Initialize a flow from cli
+* https://microsoft.github.io/promptflow/how-to-guides/develop-a-dag-flow/init-and-test-a-flow.html
+
+go to the flow root folder
+```shell
+cd ./promptflow;
+```
+
+create flow from cli
+```shell
+# cd ./promptflow;
+flowname="localcopilot";
+pf flow init --flow $flowname --type chat
+```
+
+add connection `openai`, use 
+```yaml
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/OpenAIConnection.schema.json
+name: "local-ollama"
+type: open_ai
+api_key: "<user-input>" # Don't replace the '<user-input>' placeholder. The application will prompt you to enter a value when it runs.
+organization: ""
+base_url: "http://localhost:11434/v1" # Add this line to use customized API base
+``` 
+type the `api_key` is `dummy`.
+and the model `llama3.1:8b` 
+
+* in `$HOME` folder of your user home, a `.promptflow` folder will be created and contains `pf.sqlite` to save the 
+
+test flow
+```shell
+# cd ./promptflow;
+pf flow test --flow mycopilot --interactive
+```
+
+## Starting first project with PromptFlow local
+Learning tutorial: A deeper dive on PromptFlow and Semantic Kernel
+* https://www.youtube.com/watch?v=-maOEleJ1PE
 
 ## PromptFlow with LangChain
 Integrate PromptFlow with LangChain
