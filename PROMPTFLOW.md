@@ -3,6 +3,17 @@ Prompt flow is a suite of development tools designed to streamline the end-to-en
 
 * https://github.com/microsoft/promptflow
 
+Deep delve into flow development
+Getting started with prompt flow: A step by step guidance to invoke your first flow run.
+* https://github.com/microsoft/promptflow/blob/main/docs/how-to-guides/quick-start.md
+
+Tutorial: Chat with PDF: An end-to-end tutorial on how to build a high quality chat application with prompt flow, including flow development and evaluation with metrics.
+* https://github.com/microsoft/promptflow/blob/main/examples/tutorials/e2e-development/chat-with-pdf.md
+
+`Prompt flow for VS Code`
+* https://marketplace.visualstudio.com/items?itemName=prompt-flow.prompt-flow
+
+
 
 ## PromptFlow with LangChain
 Integrate PromptFlow with LangChain
