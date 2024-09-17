@@ -45,6 +45,14 @@ and the model `llama3.1:8b`
 
 * in `$HOME` folder of your user home, a `.promptflow` folder will be created and contains `pf.sqlite` to save the 
 
+Update the local connection api key.
+```shell
+pf connection show --name local-ollama
+
+api_key="dummy";
+pf connection update --set api_key=${api_key} --name local-ollama
+```
+
 test flow
 ```shell
 # cd ./promptflow;
