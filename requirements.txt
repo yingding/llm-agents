@@ -128,3 +128,7 @@ einops==0.8.0
 # tritonclient==2.47.0
 # pytest==8.2.2
 python-dotenv==1.0.1
+
+# UI tool for building AI agent
+promptflow==1.15.0
+promptflow-tools==1.4.0
