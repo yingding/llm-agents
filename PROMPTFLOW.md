@@ -68,6 +68,10 @@ Integrate PromptFlow with LangChain
 * https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/how-to-integrate-with-langchain?view=azureml-api-2
 
 
+## RAG with Semantic Kernel (1.x)
+* https://www.youtube.com/watch?v=8QlFtKHzcaY
+
+
 ## Reference
 * https://pypi.org/project/promptflow/
 

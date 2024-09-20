@@ -5,7 +5,7 @@ import asyncio
 from semantic_kernel.core_plugins.math_plugin import MathPlugin
 
 import semantic_kernel as sk
-# from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion, AzureChatCompletion
+from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion, AzureChatCompletion
 from semantic_kernel.connectors.ai.ollama import OllamaChatCompletion
 
 # from semantic_kernel.planning.sequential_planner import SequentialPlanner
@@ -35,11 +35,18 @@ def chat(
     math_kernel = sk.Kernel()
 
     # Add the chat service
-    service_id = "default"
+    # service_id = "default"
+    # math_kernel.add_service(
+    #     OllamaChatCompletion(
+    #         ai_model_id=deployment_name,
+    #         service_id=service_id
+    #     ),
+    # )
     math_kernel.add_service(
-        OllamaChatCompletion(
-            ai_model_id=deployment_name,
-            service_id=service_id
+        AzureChatCompletion(
+            deployment_name=deployment_name,
+            api_key= connection.api_key,
+            endpoint= connection.base_url,
         ),
     )
 
