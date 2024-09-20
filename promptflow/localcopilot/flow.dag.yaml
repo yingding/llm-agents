@@ -27,5 +27,15 @@ nodes:
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
     model: llama3.1:8b
+    system_answer: ${math_planner.output}
   connection: local-ollama
   api: chat
+- name: math_planner
+  type: python
+  source:
+    type: code
+    path: math_planner.py
+  inputs:
+    connection: local-ollama
+    question: ${inputs.question}
+    deployment_name: llama3.1:8b

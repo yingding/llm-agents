@@ -13,9 +13,36 @@
           "type": [
             "string"
           ]
+        },
+        "system_answer": {
+          "type": [
+            "string"
+          ]
         }
       },
       "source": "chat.jinja2"
+    },
+    "math_planner.py": {
+      "type": "python",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "deployment_name": {
+          "type": [
+            "string"
+          ]
+        },
+        "connection": {
+          "type": [
+            "OpenAIConnection"
+          ]
+        }
+      },
+      "source": "math_planner.py",
+      "function": "chat"
     }
   }
 }
