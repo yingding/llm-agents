@@ -71,6 +71,9 @@ Integrate PromptFlow with LangChain
 ## RAG with Semantic Kernel (1.x)
 * https://www.youtube.com/watch?v=8QlFtKHzcaY
 
+* Semantic Kernel tutorial 
+https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/
+
 
 ## Reference
 * https://pypi.org/project/promptflow/
