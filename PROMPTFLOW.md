@@ -74,6 +74,7 @@ Integrate PromptFlow with LangChain
 * Semantic Kernel tutorial 
 use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/
 
+* local ollama llm with Semantic Kernel https://www.youtube.com/watch?v=OEQDZLe3slM
 
 ## Reference
 * https://pypi.org/project/promptflow/
