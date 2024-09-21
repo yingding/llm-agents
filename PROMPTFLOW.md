@@ -72,7 +72,7 @@ Integrate PromptFlow with LangChain
 * https://www.youtube.com/watch?v=8QlFtKHzcaY
 
 * Semantic Kernel tutorial 
-https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/
+use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/
 
 
 ## Reference
