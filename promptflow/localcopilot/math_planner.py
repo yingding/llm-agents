@@ -15,6 +15,7 @@ from semantic_kernel.planners.sequential_planner.sequential_planner_config impor
 from semantic_kernel.connectors.ai.chat_completion_client_base import (
     ChatCompletionClientBase,
 )
+from semantic_kernel.connectors.ai.function_choice_behavior import FunctionChoiceBehavior 
 from semantic_kernel.connectors.ai.function_call_behavior import FunctionCallBehavior
 from semantic_kernel.connectors.ai.chat_completion_client_base import ChatCompletionClientBase
 from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_prompt_execution_settings import (
@@ -71,7 +72,9 @@ def chat(
 
     # Create the planner to solve the math problem
     execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
-    execution_settings.function_call_behavior = FunctionCallBehavior.EnableFunctions(auto_invoke=True, filters={})
+    # https://devblogs.microsoft.com/semantic-kernel/introducing-python-function-choice-behavior-streamlining-ai-model-configuration/
+    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={})
+    # execution_settings.function_call_behavior = FunctionCallBehavior.EnableFunctions(auto_invoke=True, filters={})
     
     # planner = SequentialPlanner(kernel=math_kernel)
 
