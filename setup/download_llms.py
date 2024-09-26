@@ -19,6 +19,7 @@ class DirectorySetting:
         return f"{self.home_dir}/{self.huggingface_token_file}"
 
 model_map = {
+    "llama3.2-3B-inst": "meta-llama/Llama-3.2-3B-Instruct",
     "llama7B-chat":     "meta-llama/Llama-2-7b-chat-hf",
     "llama13B-chat" :   "meta-llama/Llama-2-13b-chat-hf",
     "llama70B-chat" :   "meta-llama/Llama-2-70b-chat-hf",
