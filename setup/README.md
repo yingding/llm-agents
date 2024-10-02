@@ -103,6 +103,9 @@ ollama pull zephyr:7b
 ollama pull llama3-groq-tool-use:8b
 ollama pull llama3.1:8b
 ollama pull llama3.1:8b-instruct-q3_K_M
+ollama pull llama3.2:3b-instruct-q4_K_M
+# llama3.2:3b-instruct-q4_K_M is the same as llama3.2:3b
+ollama pull llama3.2:3b
 ```
 * https://ollama.com/library/zephyr
 
