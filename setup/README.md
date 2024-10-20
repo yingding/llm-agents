@@ -6,6 +6,7 @@ python3 setup/download_gguf.py -t gorilla-gguf-v1 -m mac_local
 
 ## Ollama custom model deployment
 ### Install ollama
+* 0.3.13
 * 0.3.4
 * 0.2.8
 * 0.2.1
@@ -100,6 +101,7 @@ ollama show --modelfile ${model_name}
 ### pull model
 ```shell
 ollama pull zephyr:7b
+ollama pull mistral-nemo:12b-instruct-2407-q4_K_M
 ollama pull llama3-groq-tool-use:8b
 ollama pull llama3.1:8b
 ollama pull llama3.1:8b-instruct-q3_K_M
@@ -119,3 +121,6 @@ Reference:
 ### Patch to OpenAI response
 Using custom response adaptor
 * https://github.com/puppetm4st3r/local_function_calling/blob/main/openai.py
+
+### Blog post ollama tools support
+* https://ollama.com/blog/tool-support
