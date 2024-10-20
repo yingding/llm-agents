@@ -102,7 +102,7 @@ ollama show --modelfile ${model_name}
 Note: after the ollama is upgraded, you need to reinitialize the gorilla model and then pull.
 ```shell
 ollama pull zephyr:7b
-ollama pull mistral-nemo:12b-instruct-2407-q4_K_M
+ollama pull mistral-nemo:12b-instruct-2407-fp16
 ollama pull mistral-nemo:12b
 ollama pull llama3-groq-tool-use:8b
 ollama pull llama3.1:8b
