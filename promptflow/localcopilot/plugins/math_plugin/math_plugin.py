@@ -44,15 +44,15 @@ class MathPlugin:
     @kernel_function(name="Multiply")
     def multiply(
         self, 
-        input: Annotated[int, "the first number"],
-        amount: Annotated[int, "the second number"],
+        first: Annotated[int, "the first number to multiply"],
+        second: Annotated[int, "the second number to multiply"],
     ) -> int:
-        """Returns the muliplication of two numbers. When increasing by a percentage, don't forget to add 1 to the percentage."""
-        if isinstance(input, str):
-            input = int(input)
-        if isinstance(amount, str):
-            amount = int(amount)
-        return input * amount
+        """Multiply the first number by the second number."""
+        if isinstance(first, str):
+            first = int(first)
+        if isinstance(second, str):
+            second = int(second)
+        return first * second
 
     @staticmethod
     def add_or_subtract(input: int, amount: int, add: bool) -> int:

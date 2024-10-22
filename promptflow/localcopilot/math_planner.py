@@ -68,7 +68,7 @@ def chat(
 
     # Import the math plugin
     # math_kernel.import_skill(Math())
-    math_kernel.add_plugin(MyMathPlugin(), plugin_name="MyMath")
+    math_kernel.add_plugin(MyMathPlugin(), plugin_name="Math")
 
     # Create the planner to solve the math problem
     # execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
@@ -76,7 +76,7 @@ def chat(
     execution_settings = AzureChatPromptExecutionSettings(function_choice_behavior="required")
     # https://devblogs.microsoft.com/semantic-kernel/introducing-python-function-choice-behavior-streamlining-ai-model-configuration/
     # execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={})
-    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={"included_plugins": ["MyMath"]})
+    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={"included_plugins": ["Math"]})
     # execution_settings.function_call_behavior = FunctionCallBehavior.EnableFunctions(auto_invoke=True, filters={})
     
     # planner = SequentialPlanner(kernel=math_kernel)
