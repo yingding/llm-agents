@@ -6,6 +6,7 @@ python3 setup/download_gguf.py -t gorilla-gguf-v1 -m mac_local
 
 ## Ollama custom model deployment
 ### Install ollama
+* 0.3.14
 * 0.3.13
 * 0.3.4
 * 0.2.8
@@ -127,3 +128,10 @@ Using custom response adaptor
 
 ### Blog post ollama tools support
 * https://ollama.com/blog/tool-support
+
+### Ollama Server log
+```shell
+cat ~/.ollama/logs/server.log
+``` 
+Reference:
+* https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md
