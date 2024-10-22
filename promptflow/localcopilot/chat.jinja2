@@ -1,5 +1,6 @@
 system:
 You are a helpful assistant.
+Please answer the following questions with help form tools.
 
 {% for item in chat_history %}
 user:
@@ -11,5 +12,5 @@ assistant:
 user:
 {{question}}
 
-system:
+tools:
 {{system_answer}}

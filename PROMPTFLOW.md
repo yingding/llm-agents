@@ -83,5 +83,6 @@ use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/e
 ```
 what is 345 * 567 ?
 what is 2 * 2 ?
+what is 789 * 987 ?
 ```
 

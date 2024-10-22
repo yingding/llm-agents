@@ -4,12 +4,12 @@
     "chat.jinja2": {
       "type": "llm",
       "inputs": {
-        "chat_history": {
+        "question": {
           "type": [
             "string"
           ]
         },
-        "question": {
+        "chat_history": {
           "type": [
             "string"
           ]

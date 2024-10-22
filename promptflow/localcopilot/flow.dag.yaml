@@ -26,7 +26,7 @@ nodes:
     temperature: 0.1
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
-    model: mistral-nemo:12b
+    model: llama3.2:3b
     system_answer: ${math_planner.output}
   connection: local-ollama
   api: chat
@@ -38,4 +38,4 @@ nodes:
   inputs:
     connection: local-ollama
     question: ${inputs.question}
-    deployment_name: mistral-nemo:12b
+    deployment_name: llama3.2:3b

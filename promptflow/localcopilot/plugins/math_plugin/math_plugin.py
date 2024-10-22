@@ -12,6 +12,7 @@ class MathPlugin:
     Examples:
         {{math.Add}} => Returns the sum of input and amount (provided in the KernelArguments)
         {{math.Subtract}} => Returns the difference of input and amount (provided in the KernelArguments)
+        {{math.Multiply}} => Returns the muliplication of first and second number (provided in the KernelArguments))
     """
 
     @kernel_function(name="Add")
@@ -39,6 +40,19 @@ class MathPlugin:
         if isinstance(amount, str):
             amount = int(amount)
         return MathPlugin.add_or_subtract(input, amount, add=False)
+    
+    @kernel_function(name="Multiply")
+    def multiply(
+        self, 
+        input: Annotated[int, "the first number"],
+        amount: Annotated[int, "the second number"],
+    ) -> int:
+        """Returns the muliplication of two numbers. When increasing by a percentage, don't forget to add 1 to the percentage."""
+        if isinstance(input, str):
+            input = int(input)
+        if isinstance(amount, str):
+            amount = int(amount)
+        return input * amount
 
     @staticmethod
     def add_or_subtract(input: int, amount: int, add: bool) -> int:

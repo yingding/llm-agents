@@ -1,8 +1,8 @@
 import asyncio 
 
-# from plugins.math_plugin.Math import Math
-# from plugins.math_plugin.math_plugin import MathPlugin
-from semantic_kernel.core_plugins.math_plugin import MathPlugin
+# the core_plugins.math_plugin has no multiply function thus use a custom math plugin
+# from semantic_kernel.core_plugins.math_plugin import MathPlugin
+from plugins.math_plugin.math_plugin import MathPlugin as MyMathPlugin
 
 import semantic_kernel as sk
 from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion, AzureChatCompletion
@@ -68,12 +68,15 @@ def chat(
 
     # Import the math plugin
     # math_kernel.import_skill(Math())
-    math_kernel.add_plugin(MathPlugin(), plugin_name="Math")
+    math_kernel.add_plugin(MyMathPlugin(), plugin_name="MyMath")
 
     # Create the planner to solve the math problem
-    execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
+    # execution_settings = AzureChatPromptExecutionSettings(tool_choice="auto")
+    # auto, required, none
+    execution_settings = AzureChatPromptExecutionSettings(function_choice_behavior="required")
     # https://devblogs.microsoft.com/semantic-kernel/introducing-python-function-choice-behavior-streamlining-ai-model-configuration/
-    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={})
+    # execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={})
+    execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={"included_plugins": ["MyMath"]})
     # execution_settings.function_call_behavior = FunctionCallBehavior.EnableFunctions(auto_invoke=True, filters={})
     
     # planner = SequentialPlanner(kernel=math_kernel)
@@ -121,4 +124,4 @@ def chat(
     # print("Result:" + str(math_answer))
 
     # Add the answer of the math problem to the context as system instruction
-    return f"The bot should respond with this answer to the user's question: {str(math_answer).strip()}"
+    return f"The bot should respond with this answer to the user's question, {str(math_answer).strip()}"
