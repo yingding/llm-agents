@@ -79,3 +79,9 @@ use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/e
 ## Reference
 * https://pypi.org/project/promptflow/
 
+## example question
+```
+what is 345 * 567 ?
+what is 2 * 2 ?
+```
+

@@ -96,7 +96,8 @@ def chat(
         settings=execution_settings,
         kernel=math_kernel,
     ))
-
+    
+    print(ask)
     # print(f"type {type(math_answer)}") 
 
 
