@@ -53,6 +53,12 @@ api_key="dummy";
 pf connection update --set api_key=${api_key} --name local-ollama
 ```
 
+```shell
+host="http://localhost:11434";
+base_url="http://localhost:11434/v1";
+pf connection update --set base_url=${base_url} --set host=${host}  --name local-ollama
+```
+
 test flow
 ```shell
 # cd ./promptflow;
@@ -85,4 +91,14 @@ what is 345 * 567 ?
 what is 2 * 2 ?
 what is 789 * 987 ?
 ```
+
+## deactivate the tracing in dag
+in the `flow.dag.yaml`
+```yaml
+environment_variables:
+  PF_DISABLE_TRACING: true
+```
+Reference:
+* https://github.com/microsoft/promptflow/issues/3751#issuecomment-2387853913
+
 

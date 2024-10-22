@@ -9,6 +9,7 @@ inputs:
   question:
     type: string
     is_chat_input: true
+    default: What is 789 * 987 ?
 outputs:
   answer:
     type: string
@@ -26,7 +27,7 @@ nodes:
     temperature: 0.1
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
-    model: llama3.2:3b
+    model: mistral-nemo:12b
     system_answer: ${math_planner.output}
   connection: local-ollama
   api: chat
@@ -38,4 +39,4 @@ nodes:
   inputs:
     connection: local-ollama
     question: ${inputs.question}
-    deployment_name: llama3.2:3b
+    deployment_name: mistral-nemo:12b

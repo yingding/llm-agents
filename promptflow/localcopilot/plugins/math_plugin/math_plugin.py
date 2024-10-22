@@ -15,7 +15,7 @@ class MathPlugin:
         {{math.Multiply}} => Returns the muliplication of first and second number (provided in the KernelArguments))
     """
 
-    @kernel_function(name="Add")
+    @kernel_function(name="Add", description="Returns the Addition result of the values provided.")
     def add(
         self,
         input: Annotated[int, "the first number to add"],
@@ -28,7 +28,7 @@ class MathPlugin:
             amount = int(amount)
         return MathPlugin.add_or_subtract(input, amount, add=True)
 
-    @kernel_function(name="Subtract")
+    @kernel_function(name="Subtract", description="Returns the difference of numbers provided.")
     def subtract(
         self,
         input: Annotated[int, "the first number"],
@@ -41,7 +41,7 @@ class MathPlugin:
             amount = int(amount)
         return MathPlugin.add_or_subtract(input, amount, add=False)
     
-    @kernel_function(name="Multiply")
+    @kernel_function(name="Multiply", description="Multiply the first number by the second number.")
     def multiply(
         self, 
         first: Annotated[int, "the first number to multiply"],
