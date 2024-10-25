@@ -84,12 +84,15 @@ use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/e
 
 ## Reference
 * https://pypi.org/project/promptflow/
+* semantic kernel auto funtion invokation loop https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/function-calling/function-invocation?pivots=programming-language-csharp
+
 
 ## example question
 ```
 what is 345 * 567 ?
 what is 2 * 2 ?
 what is 789 * 987 ?
+what is 789 * 987 - 345 * 567 ?
 ```
 
 ## deactivate the tracing in dag
