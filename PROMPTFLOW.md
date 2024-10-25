@@ -41,7 +41,7 @@ organization: ""
 base_url: "http://localhost:11434/v1" # Add this line to use customized API base
 ``` 
 type the `api_key` is `dummy`.
-and the model `llama3.1:8b` 
+and the model `llama3.1:8b` or `mistral-nemo:12b` 
 
 * in `$HOME` folder of your user home, a `.promptflow` folder will be created and contains `pf.sqlite` to save the 
 
@@ -53,10 +53,10 @@ api_key="dummy";
 pf connection update --set api_key=${api_key} --name local-ollama
 ```
 
+(optional) update base url for the local connection string
 ```shell
-host="http://localhost:11434";
 base_url="http://localhost:11434/v1";
-pf connection update --set base_url=${base_url} --set host=${host}  --name local-ollama
+pf connection update --set base_url=${base_url} --name local-ollama
 ```
 
 test flow
