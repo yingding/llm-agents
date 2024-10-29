@@ -86,6 +86,28 @@ use Semantic Kernel plugins to call function tool: https://learn.microsoft.com/e
 * https://pypi.org/project/promptflow/
 * semantic kernel auto funtion invokation loop https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/function-calling/function-invocation?pivots=programming-language-csharp
 
+## OpenTelemetry Tracking LangChain and AutoGen
+* https://microsoft.github.io/promptflow/how-to-guides/tracing/index.html
+
+```python
+from openai import OpenAI
+from promptflow.tracing import start_trace
+
+# instrument OpenAI
+start_trace()
+
+client = OpenAI()
+
+completion = client.chat.completions.create(
+  model="gpt-4",
+  messages=[
+    {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
+    {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
+  ]
+)
+
+print(completion.choices[0].message)
+```
 
 ## example question
 ```

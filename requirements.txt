@@ -155,6 +155,8 @@ python-dotenv==1.0.1
 promptflow==1.16.1
 promptflow-tools==1.4.0
 azure-identity==1.19.0
+# open telemetry spec for trace feature in LangChain and AutoGen 
+promptflow-tracing==1.16.1 
 
 # semantic-kernel==1.11.0
 semantic-kernel==1.12.1
