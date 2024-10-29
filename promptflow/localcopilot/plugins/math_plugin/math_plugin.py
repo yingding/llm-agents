@@ -53,6 +53,19 @@ class MathPlugin:
         if isinstance(second, str):
             second = int(second)
         return first * second
+    
+    @kernel_function(name="Divid", description="Divid the first number by the second number.")
+    def divid(
+        self, 
+        first: Annotated[float, "the first number, dividend"],
+        second: Annotated[float, "the second number, divisor"],
+    ) -> int:
+        """ the first number by the second number."""
+        if isinstance(first, str):
+            first = float(first)
+        if isinstance(second, str):
+            second = float(second)
+        return first / second
 
     @staticmethod
     def add_or_subtract(input: int, amount: int, add: bool) -> int:
