@@ -126,4 +126,17 @@ environment_variables:
 Reference:
 * https://github.com/microsoft/promptflow/issues/3751#issuecomment-2387853913
 
+## Issues
+# Promptflow "RuntimeError: Event loop is closed"
+After updated the semantic kernel, and openai sdk. I got some eventloop closed issue.
+It also shows the connection to the local ollama is not valid, after I updated ollama version.
+
+Workaround: 
+re-pull the ollama model, after the ollama version update.
+recreate the connection in the promptflow with the same connect pointing to the local ollama
+The chat validation error in promptflow visual graph went away.
+The issue with event_loop close also went away.
+
+
+
 

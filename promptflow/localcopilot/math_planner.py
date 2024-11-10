@@ -93,7 +93,6 @@ def chat(
         base_url=connection.base_url,
     )
     
-
     chat_completion = OpenAIChatCompletion(
         ai_model_id=deployment_name,
         async_client=async_client,
@@ -166,14 +165,13 @@ def chat(
     
     # math_answer = asyncio.run(create_and_execute_plan())
 
-
-
     # create a history of the conversation
     history = ChatHistory()
     ask = "Solve this math problem: " + question
     history.add_message({"role": "user", "content": ask})
 
     # Get the response from the AI
+    math_answer = None
 
     math_answer = asyncio.run(chat_completion.get_chat_message_content(
         chat_history=history,
@@ -181,6 +179,14 @@ def chat(
         kernel=math_kernel,
         arguments=KernelArguments()
     ))
+
+    # The client is already async openai client
+    # math_answer = chat_completion.get_chat_message_content(
+    #     chat_history=history,
+    #     settings=execution_settings,
+    #     kernel=math_kernel,
+    #     arguments=KernelArguments()
+    # )
     
     # Print the results
     print("Assistant > " + str(math_answer))
@@ -193,6 +199,7 @@ def chat(
     #     print("Input vars: " + str(step.parameters.variables))
     #     print("Outpout vars: " + str(step._outputs))
     # print("Result:" + str(math_answer))
+
 
     # Add the answer of the math problem to the context as system instruction
     return f"The bot should respond with this answer to the user's question, {str(math_answer).strip()}"
