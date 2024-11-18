@@ -80,7 +80,10 @@ ollama create ${model_name} -f ${model_file}
 ```
 or
 ```shell
+# recreate custom gguf model
 source $HOME/VCS/github/ml/llm-agents/setup/update.sh
+# redownload all the relevant models
+source $HOME/VCS/github/ml/llm-agents/setup/reload.sh
 ```
 
 ### (optional) remove the ollama model
@@ -103,16 +106,17 @@ ollama show --modelfile ${model_name}
 ### pull model
 Note: after the ollama is upgraded, you need to reinitialize the gorilla model and then pull.
 ```shell
-ollama pull zephyr:7b
-ollama pull mistral-nemo:12b-instruct-2407-fp16
-ollama pull mistral-nemo:12b
-ollama pull llama3-groq-tool-use:8b
-ollama pull llama3.1:8b
-ollama pull llama3.1:70b
-ollama pull llama3.1:8b-instruct-q3_K_M
-ollama pull llama3.2:3b-instruct-q4_K_M
-# llama3.2:3b-instruct-q4_K_M is the same as llama3.2:3b
-ollama pull llama3.2:3b
+# ollama pull zephyr:7b
+# ollama pull llama3-groq-tool-use:8b
+# ollama pull llama3.1:70b
+ollama --version;
+ollama pull mistral-nemo:12b-instruct-2407-fp16;
+ollama pull mistral-nemo:12b;
+ollama pull codellama:13b;
+ollama pull llama3.1:8b;
+ollama pull llama3.1:8b-instruct-q3_K_M;
+ollama pull llama3.2:3b-instruct-q4_K_M;
+ollama pull llama3.2:3b;
 ```
 * https://ollama.com/library/zephyr
 
