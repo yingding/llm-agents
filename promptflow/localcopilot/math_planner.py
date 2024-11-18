@@ -172,21 +172,34 @@ def chat(
 
     # Get the response from the AI
     math_answer = None
+    
+    # https://stackoverflow.com/questions/45600579/asyncio-event-loop-is-closed-when-getting-loop
+    # if asyncio.get_event_loop() is None or asyncio.get_event_loop().is_closed():
+    #     asyncio.set_event_loop(asyncio.new_event_loop())
+    # loop = asyncio.get_event_loop() 
 
-    math_answer = asyncio.run(chat_completion.get_chat_message_content(
-        chat_history=history,
-        settings=execution_settings,
-        kernel=math_kernel,
-        arguments=KernelArguments()
-    ))
-
-    # The client is already async openai client
-    # math_answer = chat_completion.get_chat_message_content(
-    #     chat_history=history,
-    #     settings=execution_settings,
-    #     kernel=math_kernel,
-    #     arguments=KernelArguments()
+    # math_answer = asyncio.run(
+    #     chat_completion.get_chat_message_content(
+    #         chat_history=history,
+    #         settings=execution_settings,
+    #         kernel=math_kernel,
+    #         arguments=KernelArguments()
+    #     )
     # )
+
+    # Define an asynchronous function to get the response from the AI
+    async def get_math_answer():
+        return await chat_completion.get_chat_message_content(
+            chat_history=history,
+            settings=execution_settings,
+            kernel=math_kernel,
+            arguments=KernelArguments()
+        )
+    
+    # Run the asynchronous function in the main thread
+    # asyncio.run() to run the asynchronous function in the main thread and get the result.
+    math_answer = asyncio.run(get_math_answer())
+
     
     # Print the results
     print("Assistant > " + str(math_answer))

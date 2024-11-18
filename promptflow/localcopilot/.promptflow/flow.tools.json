@@ -43,27 +43,6 @@
       },
       "source": "math_planner.py",
       "function": "chat"
-    },
-    "chat_variant_1.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "question": {
-          "type": [
-            "string"
-          ]
-        },
-        "chat_history": {
-          "type": [
-            "string"
-          ]
-        },
-        "system_answer": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "chat_variant_1.jinja2"
     }
   }
 }
