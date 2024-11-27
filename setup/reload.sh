@@ -12,3 +12,4 @@ ollama pull llama3.1:8b-instruct-q3_K_M;
 ollama pull llama3.2:3b-instruct-q4_K_M;
 ollama pull llama3.2:3b;
 ollama pull qwen2.5-coder:14b;
+ollama pull qwen2.5-coder:32b;
