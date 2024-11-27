@@ -120,7 +120,8 @@ ollama pull llama3.2:3b-instruct-q4_K_M;
 ollama pull llama3.2:3b;
 # ollama pull firefunction-v2:70b;
 ollama pull qwen2.5-coder:14b;
-ollama pull qwen2.5-coder:32b;
+# qwen2.5-coder:32b is not fast enough for ollama on mps
+# ollama pull qwen2.5-coder:32b;
 ```
 * https://ollama.com/library/zephyr
 * https://ollama.com/search?c=tools
