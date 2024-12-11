@@ -100,6 +100,18 @@ model_name=adrienbrault/gorilla-openfunctions-v2:Q4_K_M
 ollama show --modelfile ${model_name}
 ```
 
+### (optional) list loaded models in the RAM
+```shell
+ollama ps
+```
+
+### (optional) stop a model which is loaded and running
+```shell
+model_name="mistral-nemo:12b";
+ollama stop ${model_name}
+```
+You will not see the stopped model in the `ollama ps`
+
 ### (optional) exit ollama terminal cli
 ```shell
 /byes
@@ -114,9 +126,9 @@ Note: after the ollama is upgraded, you need to reinitialize the gorilla model a
 ollama --version;
 ollama pull mistral-nemo:12b-instruct-2407-fp16;
 ollama pull mistral-nemo:12b;
-ollama pull codellama:13b;
-ollama pull llama3.1:8b;
-ollama pull llama3.1:8b-instruct-q3_K_M;
+# ollama pull codellama:13b;
+# ollama pull llama3.1:8b;
+# ollama pull llama3.1:8b-instruct-q3_K_M;
 ollama pull llama3.2:3b-instruct-q4_K_M;
 ollama pull llama3.2:3b;
 # ollama pull firefunction-v2:70b;
