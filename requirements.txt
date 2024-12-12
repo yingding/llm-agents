@@ -129,18 +129,19 @@ diffusers==0.31.0
 sentencepiece==0.2.0
 
 # open ai
-# openai==1.52.2
-# openai==1.54.3
 # openai==1.54.4
-openai==1.55.1
+# openai==1.55.1
+openai==1.57.2
 
 # autogenstudio
 # https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 # autogenstudio==0.1.4
 # pyautogen==0.2.35
 autogenstudio==0.1.5
+autogen-agentchat==0.2.39
+# autogen-agentchat~=0.2
 # pyautogen>=0.2.35
-pyautogen==0.4
+# pyautogen==0.4
 # pyautogen==0.3.2
 
 #phi 
@@ -168,4 +169,5 @@ promptflow-tracing==1.16.2
 # semantic-kernel==1.12.1
 # semantic-kernel==1.14.0
 # semantic-kernel==1.15.0
-semantic-kernel==1.16.0
+# semantic-kernel==1.16.0
+semantic-kernel==1.17.0
