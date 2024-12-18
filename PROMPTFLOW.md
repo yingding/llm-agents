@@ -59,6 +59,12 @@ base_url="http://localhost:11434/v1";
 pf connection update --set base_url=${base_url} --name local-ollama
 ```
 
+(optional) delete connection
+If you encouter key ring issue and the local connection can not be open, delete it and recreate it.
+```shell
+pf connection delete --name local-ollama
+```
+
 test flow
 ```shell
 # cd ./promptflow;
