@@ -13,7 +13,7 @@ $VERSION="3.11";
 $ENV_NAME="agents${VERSION}";
 source $HOME/Documents/VENV/${ENV_NAME}/bin/activate;
 python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements.txt --no-cache-dir
+python3 -m pip install -r requirements_win.txt --no-cache-dir
 ```
 
 ## Add a jupyter notebook kernel to VENV
