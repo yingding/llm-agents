@@ -14,24 +14,27 @@ $env:ENV_NAME = "agents$env:VERSION"
 $env:VERSION = "3.11"
 $env:ENV_NAME = "agents$env:VERSION"
 & "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1"
-python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements_win.txt --no-cache-dir
+python -m pip install --upgrade pip
+python -m pip install -r requirements_win.txt --no-cache-dir
 ```
+
+Note:
+* Use `python` instead of `python3` on windows os
 
 ## Add a jupyter notebook kernel to VENV
 ```powershell
 $env:VERSION = "3.11"
 $env:ENV_NAME = "agents$env:VERSION"
 & "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1"
-python3 -m pip install --upgrade pip
-python3 -m pip install ipykernel
+python -m pip install --upgrade pip
+python -m pip install ipykernel
 deactivate
 ```
 
 We need to reactivate the venv so that the ipython kernel is available after installation.
 ```powershell
 # ipython kernel install --user --name=$env:ENV_NAME
-python3 -m ipykernel install --user --name=$env:ENV_NAME --display-name $env:ENV_NAME
+python -m ipykernel install --user --name=$env:ENV_NAME --display-name $env:ENV_NAME
 ```
 Note: 
 * restart the vs code, to select the venv as jupyter notebook kernel 
@@ -50,7 +53,18 @@ jupyter kernelspec uninstall -y $env:ENV_NAME
 ```
 
 ## (Optional) Remove all package from venv
+For the venv python
 ```powershell
-python3 -m pip freeze | xargs pip uninstall -y
+which python
+python -m pip freeze | %{$_.split('==')} | %{python -m pip uninstall -y $_}
+python -m pip list
+```
+
+Note: `which` cmd can be installed from powershell with `winget install which`
+
+For the system python3
+```powershell
+which python3
+python3 -m pip freeze | %{$_.split('==')} | %{python3 -m pip uninstall -y $_}
 python3 -m pip list
 ```
