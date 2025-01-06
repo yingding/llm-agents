@@ -11,11 +11,11 @@ $env:ENV_NAME = "agents$env:VERSION"
 
 ## Install packages 
 ```powershell
-$env:VERSION = "3.11"
-$env:ENV_NAME = "agents$env:VERSION"
-& "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1"
-python -m pip install --upgrade pip
-python -m pip install -r requirements_win.txt --no-cache-dir
+$env:VERSION = "3.11";
+$env:ENV_NAME = "agents$env:VERSION";
+& "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1";
+python -m pip install --upgrade pip;
+python -m pip install -r requirements_win.txt --no-cache-dir;
 ```
 
 Note:
