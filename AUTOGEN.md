@@ -10,7 +10,27 @@ cd <project root>
 autogenstudio ui --host 127.0.0.1 --port 8080 --appdir ./autogen/studio/
 ```
 
+```powershell
+# cd to the directory
+cd $env:USERPROFILE\Documents\VCS\llm-agents;
+
+# activate python env
+$VERSION="3.12";
+$ENV_NAME="agents";
+$ENV_SURFIX="pip";
+$ENV_FULL_NAME = "$ENV_NAME$VERSION$ENV_SURFIX";
+& "$env:USERPROFILE\Documents\VENV\$ENV_FULL_NAME\Scripts\Activate.ps1";
+
+# test python version
+Invoke-Expression "(Get-Command python).Source";
+# autogenstudio ui --host 127.0.0.1 --port 8080 --reload --log-level debug --appdir ./autogen/studio/
+
+# start autogen studio ui
+autogenstudio ui --host 127.0.0.1 --port 8080 --appdir ./autogen/studio/
+```
+
 ## Reference:
+* MSFT Autogen Repository https://github.com/microsoft/autogen
 * Blog post: https://www.microsoft.com/en-us/research/blog/introducing-autogen-studio-a-low-code-interface-for-building-multi-agent-workflows/
 * Paper: https://arxiv.org/abs/2408.15247
 * Autogen Studio https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
