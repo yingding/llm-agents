@@ -2,20 +2,36 @@
 use the `create_env.sh` script to create a venv on macosx
 
 ```powershell
-$env:VERSION = "3.11"
-$env:ENV_NAME = "agents$env:VERSION"
-#TODO
+cd $env:USERPROFILE\Documents\VCS\llm-train;
 
-# source ./envtools/create_env.sh -p ~/VENV/${ENV_NAME} -v $VERSION
+$env:VERSION="3.12"; # "3.11"
+$env:ENV_NAME="gpt";
+$env:ENV_SURFIX="agents";
+$env:PM="pip";
+.\envtools\create_env.ps1 -VERSION $env:VERSION -ENV_NAME $env:ENV_NAME -ENV_SURFIX $env:ENV_SURFIX -PM $env:PM;
+```
+
+```powershell
+cd $env:USERPROFILE\Documents\VCS\llm-agents;
+$PackageFile="requirements_win.txt";
+Invoke-Expression "(Get-Command python).Source";
+& "python" -m pip install -r $PackageFile --no-cache-dir;
 ```
 
 ## Install packages 
 ```powershell
-$env:VERSION = "3.11";
-$env:ENV_NAME = "agents$env:VERSION";
-& "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1";
-python -m pip install --upgrade pip;
-python -m pip install -r requirements_win.txt --no-cache-dir;
+$VERSION="3.12";
+$ENV_NAME="gpt";
+$ENV_SURFIX="agents";
+$ENV_FULL_NAME = "$ENV_NAME$VERSION$ENV_SURFIX";
+$PackageFile="requirements_win.txt";
+& "$env:USERPROFILE\Documents\VENV\$ENV_FULL_NAME\Scripts\Activate.ps1";
+Invoke-Expression "(Get-Command python).Source";
+
+& "python" -m pip install --upgrade pip;
+& "python" -m pip install -r $PackageFile --no-cache-dir;
+
+deactivate
 ```
 
 Note:
@@ -23,11 +39,17 @@ Note:
 
 ## Add a jupyter notebook kernel to VENV
 ```powershell
-$env:VERSION = "3.11"
-$env:ENV_NAME = "agents$env:VERSION"
-& "$HOME\Documents\VENV\$env:ENV_NAME\Scripts\Activate.ps1"
-python -m pip install --upgrade pip
-python -m pip install ipykernel
+$VERSION="3.12";
+$ENV_NAME="gpt";
+$ENV_SURFIX="agents";
+$ENV_FULL_NAME = "$ENV_NAME$VERSION$ENV_SURFIX";
+
+& "$env:USERPROFILE\Documents\VENV\$ENV_FULL_NAME\Scripts\Activate.ps1";
+Invoke-Expression "(Get-Command python).Source";
+
+& "python" -m pip install --upgrade pip
+& "python" -m pip install ipykernel
+
 deactivate
 ```
 
@@ -47,9 +69,12 @@ Reference:
 ## (Optional) Remove ipykernel
 ```powershell
 # jupyter kernelspec uninstall -y <VENV_NAME>
-$env:VERSION = "3.11"
-$env:ENV_NAME = "agents$env:VERSION"
-jupyter kernelspec uninstall -y $env:ENV_NAME
+$VERSION="3.12";
+$ENV_NAME="gpt";
+$ENV_SURFIX="agents";
+$ENV_FULL_NAME = "$ENV_NAME$VERSION$ENV_SURFIX";
+
+jupyter kernelspec uninstall -y $ENV_FULL_NAME
 ```
 
 ## (Optional) Remove all package from venv
