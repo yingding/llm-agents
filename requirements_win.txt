@@ -142,3 +142,6 @@ azure-identity==1.20.0
 promptflow-tracing==1.17.2
 
 semantic-kernel==1.22.0
+
+## LangGraph
+langgraph==0.3.2
