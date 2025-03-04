@@ -47,11 +47,12 @@ torchvision==0.21.0
 # langchainhub==0.1.21
 # langchain-ollama==0.1.3
 
-langchain==0.3.19
-langchain-community==0.3.18
+langchain==0.3.20
+langchain-community==0.3.19
 langchain-huggingface==0.1.2
 langchainhub==0.1.21
 langchain-ollama==0.2.3
+langchain-openai==0.3.7
 
 # need Pydantic 1.10.12 to better evaluate typehints
 # https://github.com/langchain-ai/langchain/issues/8577#issuecomment-1663249273
