@@ -28,3 +28,9 @@ Invoke-Expression "(Get-Command python).Source";
 ## Reference
 * LangGraph tutorial https://www.datacamp.com/tutorial/langgraph-tutorial
 * LangGraph concept https://langchain-ai.github.io/langgraph/concepts/high_level/
+* LangGraph overview https://langchain-ai.github.io/langgraph/
+* LangGraph prebuilt agents https://langchain-ai.github.io/langgraph/prebuilt/
+* Langchain OpenAI https://python.langchain.com/docs/integrations/chat/
+
+
+
