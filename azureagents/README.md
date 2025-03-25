@@ -7,6 +7,7 @@ New Beta SDK of Azure AI Foundry
 * Chat using Azure AI Foundry https://github.com/Azure-Samples/get-started-with-ai-chat
 * Azure AI Foundry Document https://learn.microsoft.com/en-gb/azure/ai-foundry/
 * AI Agent Workshop 2025 link https://github.com/yingding/AI-Agent-Workshop-2025
+* Model Supports Azure AI Agent Service: https://learn.microsoft.com/en-gb/azure/ai-services/agents/concepts/model-region-support
 
 
 
