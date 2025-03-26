@@ -1,0 +1,11 @@
+# Azure AI SDKs for AI Foundry
+azure-ai-projects==1.0.0b7 #beta SDK
+azure-identity==1.21.0
+
+# Python Notebook Libs
+ipykernel==6.29.5
+ipywidgets==8.1.5
+jupyter==1.1.1
+
+# ENV variable Management
+python-dotenv==1.1.0

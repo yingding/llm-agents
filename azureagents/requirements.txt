@@ -1,2 +1,0 @@
-# beta SDK
-azure-ai-projects==1.0.0b7
