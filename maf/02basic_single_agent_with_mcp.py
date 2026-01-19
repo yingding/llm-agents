@@ -1,5 +1,11 @@
 # pip install agent-framework --pre
 # Use `az login` to authenticate with Azure CLI
+"""
+Docstring for maf.02basic_single_agent_with_mcp
+This module demonstrates the use of ChatAgent with HostedMCPTool
+to access remote Microsoft Learn MCP endpoint.
+It uses an local AgentThread to maintain conversation state across multiple interactions.
+"""
 
 import asyncio
 from agent_framework import (
