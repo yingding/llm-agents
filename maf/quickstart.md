@@ -103,6 +103,5 @@ cd ./maf;
 # run python script e.g. 01basic_llm_chatcompletions_client.py 
 python3 01basic_llm_chatcompletions_client.py
 ```
-
-** Note:** \
+**Note:**\
 You can change the env variable `WITH_LOGGING="False"` or `WITH_LOGGING="True"` in the .env config file to turn on or turn off the logging outputs.
