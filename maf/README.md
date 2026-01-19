@@ -13,5 +13,6 @@ Agent Framework offers **two** primary categories of capabilities:
 
 ## Reference
 * Intro Microsoft Agent Framework (MAF): https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview
-
+* Github Repo Microsoft Agent Framework: https://github.com/microsoft/agent-framework
 * AI Agents for Beginner (14 Agent Framework): https://microsoft.github.io/ai-agents-for-beginners/
+* Frontier Agent Workshop https://github.com/yingding/frontier-agents-workshop/

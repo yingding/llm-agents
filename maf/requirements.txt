@@ -1,0 +1,3 @@
+# install all SDK packages
+agent-framework==1.0.0b260116
+
