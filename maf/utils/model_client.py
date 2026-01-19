@@ -23,7 +23,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-
 def create_chat_client(**kwargs) -> BaseChatClient:
     """Create an Azure OpenAIChatClient."""
     model_name = kwargs.get("model_name", settings.model_deployment_name)
