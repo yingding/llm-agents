@@ -6,4 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "agent-framework==1.0.0b260116",
+    "azure-identity==1.25.1",
+    "pydantic==2.12.5",
+    "python-dotenv==1.2.1",
 ]
