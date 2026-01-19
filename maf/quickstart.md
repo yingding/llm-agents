@@ -7,7 +7,7 @@ All setup task in this section only need to be done once on your dev host.
 ## 1.1 Create python venv with UV package tool
 This section documents the cmds to install `UV` python package tool.
 
-### Installl UV
+### Install UV
 On Mac:
 ```shell
 brew install uv
@@ -23,7 +23,7 @@ uv self update
 uv --version
 ```
 
-### Display availbe python version with UV
+### Display available python version with UV
 Use the following cmd to show the python version
 ```shell
 uv python list
