@@ -136,13 +136,13 @@ openai==1.57.2
 # autogenstudio
 # https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 # autogenstudio==0.1.4
-# pyautogen==0.2.35
+# ag2==0.2.35
 autogenstudio==0.1.5
 autogen-agentchat==0.2.39
 # autogen-agentchat~=0.2
-# pyautogen>=0.2.35
-# pyautogen==0.4
-# pyautogen==0.3.2
+# ag2>=0.2.35
+# ag2==0.4
+# ag2==0.3.2
 
 #phi 
 # flash_attn==2.5.8
