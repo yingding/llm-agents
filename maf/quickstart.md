@@ -40,6 +40,7 @@ uv python list
 This task is only necessary, should there be now `pyproject.toml` file in the uv project folder
 ```shell
 uv init
+# recreate teh pyproject.toml
 uv add --prerelease=allow -r requirements.txt
 ```
 

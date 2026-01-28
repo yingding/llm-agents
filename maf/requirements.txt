@@ -1,5 +1,7 @@
 # install all SDK packages
-agent-framework==1.0.0b260116
+# agent-framework==1.0.0b260116
+agent-framework==1.0.0b260128
+agent-framework-devui==1.0.0b260128
 python-dotenv==1.2.1
 # azure-identity==1.26.0b1
 azure-identity==1.25.1
