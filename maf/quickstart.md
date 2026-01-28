@@ -23,6 +23,13 @@ uv self update
 uv --version
 ```
 
+On Windows:
+```powershell
+winget install --id astral-sh.uv -e
+uv self update
+uv --version
+```
+
 ### Display available python version with UV
 Use the following cmd to show the python version
 ```shell
@@ -58,11 +65,17 @@ Source: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?vi
 
 ## 1.3 Creating Python VENV
 
-### Creating VENV on Linux/MacOSX
+### 1.3.1 Creating VENV on Linux/MacOSX
 You will use `uv` tool to create a python venv, `uv` tool is a rust implementation, doesn't have `pip` by design.
 ```shell
 cd ./maf;
-uv venv --python 3.12 && source .venv/bin/activate && uv sync;
+uv venv --python 3.12 && source .venv/bin/activate && uv sync --prerelease=allow;
+```
+
+### 1.3.2 Create VENV on Windows
+```powershell
+cd .\maf;
+uv venv --python 3.12 && .\.venv\Scripts\activate && uv sync --prerelease=allow;
 ```
 
 ## 1.4 Login to azure tenant
@@ -80,28 +93,52 @@ az login --tenant <your_tenant_id>
 ## 1.5 Fill out the config .env file
 Use the following cmds to fill out the config .env file for your python project.
 
+### 1.5.1 Fill out config on Linux/MacOSX
 ```shell
 cd ./maf;
-cp env.example .env
+cp .env.example .env
 # Edit .env and add env variable with your foundry config
 ```
+
+### 1.5.2 Fill out config on Windows
+```powershell
+cd .\maf;
+Copy-Item .env.example .env
+# Edit .env and add env variable with your foundry config
+``` 
 
 # 2 Run python sample scripts
 After the dev host is setup successful, use following steps to run sample scripts.
 
 ## 2.1 Activate python venv
+On Linux / MacOSX
 ```shell
 cd ./maf;
 ## uv sync to install the dependency from pyproject.toml
 source .venv/bin/activate && uv sync;
 ```
 
+On Windows
+```powershell
+cd .\maf;
+.\.venv\Scripts\activate && uv sync;
+```
+
 ## 2.2 Run sample scripts in venv
 with the venv activated
+
+On Linux / MacOSX:
 ```shell
 cd ./maf;
 # run python script e.g. 01basic_llm_chatcompletions_client.py 
 python3 01basic_llm_chatcompletions_client.py
 ```
+
+On Windows
+```powershell
+cd .\maf;
+python 01basic_llm_chatcompletions_client.py
+```
+
 **Note:**\
 You can change the env variable `WITH_LOGGING="False"` or `WITH_LOGGING="True"` in the .env config file to turn on or turn off the logging outputs.
